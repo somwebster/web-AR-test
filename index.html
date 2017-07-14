@@ -144,25 +144,21 @@
 	// arWorldRoot.add( mesh );
 
 	var loader = new THREE.FontLoader();
+	var text = "SRM IS THE BEST COLLEGE";
 
 	loader.load( 'fonts/Roboto_Regular.json', function ( font ) {
 
-		var geometry = new THREE.TextGeometry( 'Hello three.js!', {
+		var geometry = new THREE.TextGeometry( text, {
 			font: font,
-			size: 80,
-			height: 5,
-			curveSegments: 12,
-			bevelEnabled: true,
-			bevelThickness: 10,
-			bevelSize: 8,
-			bevelSegments: 5
+			size: 0.6,
+			height: 0.6,
 		} );
 
 		var material	= new THREE.MeshNormalMaterial(); 
 		var mesh	= new THREE.Mesh( geometry, material );
-		mesh.position.y	= 0.5
+		// mesh.position.y	= 0.5
+		mesh.position.x = -2;
 		arWorldRoot.add( mesh );
-
 	} );
 	
 	// var geometry	= new THREE.TorusKnotGeometry(0.3,0.1,64,16);
