@@ -144,29 +144,29 @@
 	// arWorldRoot.add( mesh );
 
 	var loader = new THREE.FontLoader();
-	var text = "SRM IS THE BEST COLLEGE";
+	var text = "Welcome to SRM University\nYou are at BMS block\nCanteen ->\n<- TRP";
 
 	loader.load( 'fonts/Roboto_Regular.json', function ( font ) {
 
 		var geometry = new THREE.TextGeometry( text, {
 			font: font,
-			size: 0.6,
-			height: 0.6,
+			size: 0.2,
+			height: 0.1,
 		} );
 
-		var material	= new THREE.MeshNormalMaterial(); 
+		// var material	= new THREE.MeshNormalMaterial(); 
+		var material	= new THREE.MeshNormalMaterial({
+			transparent : true,
+			opacity: 1,
+			side: THREE.DoubleSide
+		}); 
 		var mesh	= new THREE.Mesh( geometry, material );
-		// mesh.position.y	= 0.5
-		mesh.position.x = -2;
+		mesh.position.x = -0.7;
+		mesh.rotation.x = -1.5;
 		arWorldRoot.add( mesh );
 	} );
 	
 	// var geometry	= new THREE.TorusKnotGeometry(0.3,0.1,64,16);
-	
-	
-	// onRenderFcts.push(function(){
-	// 	mesh.rotation.x += 0.1
-	// })
 
 	//////////////////////////////////////////////////////////////////////////////////
 	//		render the whole thing on the page
