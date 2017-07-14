@@ -15,9 +15,13 @@
 	<a-scene stats embedded arjs='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180'>
 
 <a-assets>
-      <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
-    </a-assets>
-<a-sky src="http://i.imgur.com/IrsfEgR.png" rotation="0 -130 0"></a-sky>
+     <a-assets>
+    <img id="ground" src="http://i.imgur.com/IrsfEgR.png">
+  </a-assets>
+  <!-- Basic plane. -->
+  <a-plane color="#CCC" height="20" width="20"></a-plane>
+  <!-- Textured plane parallel to ground. -->
+  <a-plane src="#ground" height="100" width="100" rotation="-90 0 0"></a-plane>
 
 
 		<a-marker-camera preset='hiro'></a-marker-camera>
