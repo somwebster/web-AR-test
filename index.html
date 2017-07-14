@@ -144,13 +144,13 @@
 	// arWorldRoot.add( mesh );
 
 	var loader = new THREE.FontLoader();
-	var text = "Welcome to SRM University\nYou are at BMS block\nCanteen ->\n<- TRP";
+	var text = "Welcome to\nSRM University\nYou are\nat BMS block\n        Canteen ->\n        <- TRP";
 
 	loader.load( 'fonts/Roboto_Regular.json', function ( font ) {
 
 		var geometry = new THREE.TextGeometry( text, {
 			font: font,
-			size: 0.2,
+			size: 0.1,
 			height: 0.1,
 		} );
 
@@ -161,7 +161,8 @@
 			side: THREE.DoubleSide
 		}); 
 		var mesh	= new THREE.Mesh( geometry, material );
-		mesh.position.x = -0.7;
+		mesh.position.x = -0.5;
+		mesh.position.z = -0.5;
 		mesh.rotation.x = -1.5;
 		arWorldRoot.add( mesh );
 	} );
