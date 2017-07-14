@@ -11,11 +11,14 @@
 	<a-scene stats embedded arjs='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180'>
 
 		<!-- define the object which gonna be put on this marker  -->
-		<a-box position='0 0.5 0' material='opacity: 0.5; side: double'>
-			<a-torus-knot radius='0.27' radius-tubular='0.05'>
-				<a-animation attribute="rotation" to="360 0 0" dur="3000" easing='linear' repeat="indefinite"></a-animation>
-			</a-torus-knot>
-		</a-box>
+		<a-scene>
+    <a-assets>
+      <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
+    </a-assets>
+ 
+    <a-entity text="text: What's up"></a-entity>
+    <a-entity text="text: Dog?; font: #optimerBoldFont"></a-entity>
+  </a-scene>
 
 		<a-marker-camera preset='hiro'></a-marker-camera>
 	</a-scene>
