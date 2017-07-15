@@ -146,6 +146,9 @@
 	var materialx = new THREE.MeshBasicMaterial( {color: 0xffff00, side: THREE.DoubleSide} );
 	var plane = new THREE.Mesh( geometryx, materialx );
 	arWorldRoot.add( plane );
+	plane.position.x = -0.5;
+	plane.position.z = -0.5;
+	plane.rotation.x = -1.5;
 
 	var loader = new THREE.FontLoader();
 	var text = "Welcome to\nSRM University\nYou are\nat BMS block\n        Canteen ->\n        <- TRP";
