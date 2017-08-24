@@ -1,5 +1,5 @@
 function main(){
     renderBox(smoothedRoot);
-	renderText("Team FnPlus ", smoothedRoot);
+	renderText("FnPlus ", smoothedRoot);
 	
 }
