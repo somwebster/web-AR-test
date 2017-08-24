@@ -1,4 +1,4 @@
 function main(){
     renderBox(smoothedRoot);
-	renderText("TEST", smoothedRoot);
+	renderText("Hello SRM ", smoothedRoot);
 }
